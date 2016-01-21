@@ -14,6 +14,10 @@ import java.util.LinkedList;
 public class Deck {
     //Variable to store deck
     LinkedList<Card> myDeck = new LinkedList<>();
+    //Variable to store discard pile which will be combined back later with
+    //the deck
+    LinkedList<Card> myDiscardPile = new LinkedList<>();
+    
     //Create the 35 unique playing cards in Incan gold
     Card card1 = new Card("Hazard", 1, "Snake");
     Card card2 = new Card("Hazard", 2, "Snake");
@@ -95,5 +99,43 @@ public class Deck {
     public void shuffleDeck(){
         Collections.shuffle(myDeck);
     }
+    
+    public Card revealTopCard()
+    {
+        return myDeck.getFirst();
+    }
+    
+    public void cardToDiscardPile()
+    {
+        myDiscardPile.add(myDeck.getFirst());
+        myDeck.pop();
+        
+    }
+    
+    public void iniTempleOne()
+    {
+        myDeck.add(card31);
+    }
+    
+    public void iniTempleTwo()
+    {
+        myDeck.add(card32);
+    }
+    
+    public void iniTempleThree()
+    {
+        myDeck.add(card33);
+    }
+    
+    public void iniTempleFour()
+    {
+        myDeck.add(card34);
+    }
+    
+    public void iniTempleFive()
+    {
+        myDeck.add(card35);
+    }
+    
     
 }

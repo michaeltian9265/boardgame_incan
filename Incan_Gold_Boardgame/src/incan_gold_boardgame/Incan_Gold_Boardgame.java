@@ -5,17 +5,27 @@
  */
 package incan_gold_boardgame;
 
+import java.util.Collections;
+import java.util.LinkedList;
+import java.util.ArrayList;
+import java.util.Scanner;
 /**
  *
  * @author Michael
  */
 public class Incan_Gold_Boardgame {
+    
+    Scanner playerNumber = new Scanner(System.in);
+    ArrayList<Player> myPlayers = new ArrayList<>();
+    
+    
 
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+        System.out.println("Welcome to Incan Gold,  How many players will be participating in this game?");
+        
     }
     
 }
