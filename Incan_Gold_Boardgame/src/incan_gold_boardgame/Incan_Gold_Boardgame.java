@@ -15,8 +15,9 @@ import java.util.Scanner;
  */
 public class Incan_Gold_Boardgame {
     
-    Scanner playerNumber = new Scanner(System.in);
+    
     ArrayList<Player> myPlayers = new ArrayList<>();
+    
     
     
 
@@ -24,7 +25,26 @@ public class Incan_Gold_Boardgame {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
+        //Variable to store all players in this session
+        ArrayList<Player> myPlayers = new ArrayList<>();
+        //Scanning for next user input
+        Scanner playerScanner = new Scanner(System.in);
+        Deck myPlayingDeck = new Deck();
+        myPlayingDeck.initializeDeck();
+        
+        int numOfPlayers;
+        //Initialzing players depending on user input
         System.out.println("Welcome to Incan Gold,  How many players will be participating in this game?");
+        numOfPlayers = playerScanner.nextInt();
+        for (int i = 0; i < numOfPlayers; i++){
+            System.out.println("Please enter the name for player " + (i + 1));
+            String playerName = playerScanner.next();
+            Player myNewPlayer = new Player();
+            myNewPlayer.setPlayerName(playerName);
+            myPlayers.add(myNewPlayer);
+        }
+        
+        
         
     }
     
